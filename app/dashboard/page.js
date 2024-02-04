@@ -1,8 +1,6 @@
 // @react/client
 "use client";
 import React, { useEffect, useState } from "react";
-import Sidebar from "/src/components/ui/sidebar";
-import Topnav from "/src/components/ui/topnav";
 import supabase from "/src/app/config/createClient"; // Adjust the path as necessary
 import { CookingPot } from "lucide-react";
 var ical2json = require("ical2json");
