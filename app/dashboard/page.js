@@ -85,33 +85,90 @@ const Dashboard = () => {
           <div className="mt-4"></div>
         </div>
       </div>
-      <div className="flex-1 bg-white p-4 md:p-8 rounded-r-3xl shadow-xl">
+      <div className="flex-1 bg-white p-4 md:p-8 rounded-r-3xl shadow-xl min-h-full overflow-x-auto">
         {/* Display calendar files */}
-        <div className="bg-white rounded-lg shadow-lg p-4 flex-grow">
-          <p className="text-2xl font-semibold text-gray-800">
+        <div className="bg-white rounded-lg p-4 flex-grow">
+          <p className="text-4xl font-semibold text-gray-800">
             Welcome to Your Dashboard
           </p>
         </div>
-        <div className="p-4 flex mx-auto">
-          {/* Download cards in the sidebar */}
-          {calendarFiles.map(calendar => (
-            <div
-              key={calendar.id}
-              className="planCard  m-4 bg-gray-300 hover:bg-gray-400 flex-col rounded-lg shadow-lg p-4 mb-4 h-32 flex text-left justify-between h-auto min-h-min cursor-pointer transition-transform transform hover:scale-105"
-            >
-              <p className="text-2xl m-2">{calendar.name}</p>
-              <p className="text-sm m-2 text-gray-600">
-                {calendar.description} Explore and download this calendar.
-              </p>
-              <a
-                href={`https://scfcwyrvpqjevdueyjhc.supabase.co/storage/v1/object/public/calendar_files/calendar_ics/${calendar.name}`}
-                download={calendar.name}
-                className="bg-blue-500 hover:bg-blue-700 text-white m-2 text-center px-4 py-2 w-3/6 rounded-full transition duration-300 ease-in-out"
-              >
-                Download
-              </a>
+        <div className="p-4 flex flex-col mx-auto flex-row my-4">
+          <div className="mb-12">
+            {/* Health and fitness category */}
+            <p className="text-2xl">Your Health & Fitness</p>
+            <div className="flex flex-row justify-center align-center">
+              {/* Download cards in the sidebar */}
+              {calendarFiles.map(calendar => (
+                <div
+                  key={calendar.id}
+                  className="planCard  mr-6 mt-6 bg-gray-300 hover:bg-gray-400 flex-col rounded-lg shadow-lg p-4 mb-4 h-32 flex text-left justify-between h-auto min-h-min cursor-pointer transition-transform transform hover:scale-105"
+                >
+                  <p className="text-2xl m-2">{calendar.name}</p>
+                  <p className="text-sm m-2 text-gray-600">
+                    {calendar.description} Explore and download this calendar.
+                  </p>
+                  <a
+                    href={`https://scfcwyrvpqjevdueyjhc.supabase.co/storage/v1/object/public/calendar_files/calendar_ics/${calendar.name}`}
+                    download={calendar.name}
+                    className="bg-blue-500 hover:bg-blue-700 text-white m-2 text-center px-4 py-2 w-3/6 rounded-full transition duration-300 ease-in-out"
+                  >
+                    Download
+                  </a>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          <div className="mb-12">
+            {/* Lifestyle & Productivity category */}
+            <p className="text-2xl">Lifestyle & Productivity</p>
+            <div className="flex flex-row justify-center align-center">
+              {/* Download cards in the sidebar */}
+              {calendarFiles.map(calendar => (
+                <div
+                  key={calendar.id}
+                  className="planCard  mr-6 mt-6 bg-gray-300 hover:bg-gray-400 flex-col rounded-lg shadow-lg p-4 mb-4 h-32 flex text-left justify-between h-auto min-h-min cursor-pointer transition-transform transform hover:scale-105"
+                >
+                  <p className="text-2xl m-2">{calendar.name}</p>
+                  <p className="text-sm m-2 text-gray-600">
+                    {calendar.description} Explore and download this calendar.
+                  </p>
+                  <a
+                    href={`https://scfcwyrvpqjevdueyjhc.supabase.co/storage/v1/object/public/calendar_files/calendar_ics/${calendar.name}`}
+                    download={calendar.name}
+                    className="bg-blue-500 hover:bg-blue-700 text-white m-2 text-center px-4 py-2 w-3/6 rounded-full transition duration-300 ease-in-out"
+                  >
+                    Download
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="mb-12">
+            {/* Technology & Apps */}
+            <p className="text-2xl">Technology & Apps</p>
+            <div className="flex flex-row justify-center align-center">
+              {/* Download cards in the sidebar */}
+              {calendarFiles.map(calendar => (
+                <div
+                  key={calendar.id}
+                  className="planCard  mr-6 mt-6 bg-gray-300 hover:bg-gray-400 flex-col rounded-lg shadow-lg p-4 mb-4 h-32 flex text-left justify-between h-auto min-h-min cursor-pointer transition-transform transform hover:scale-105"
+                >
+                  <p className="text-2xl m-2">{calendar.name}</p>
+                  <p className="text-sm m-2 text-gray-600">
+                    {calendar.description} Explore and download this calendar.
+                  </p>
+                  <a
+                    href={`https://scfcwyrvpqjevdueyjhc.supabase.co/storage/v1/object/public/calendar_files/calendar_ics/${calendar.name}`}
+                    download={calendar.name}
+                    className="bg-blue-500 hover:bg-blue-700 text-white m-2 text-center px-4 py-2 w-3/6 rounded-full transition duration-300 ease-in-out"
+                  >
+                    Download
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
       <div className=""></div>
